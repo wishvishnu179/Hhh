@@ -17,7 +17,7 @@ class DDLStatus:
 
     def status(self):
         return MirrorStatus.STATUS_UPLOADING
-    
+
     def name(self):
         return self.__obj.name
 

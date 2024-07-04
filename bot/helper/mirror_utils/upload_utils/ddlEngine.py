@@ -7,7 +7,7 @@ from re import findall as re_findall
 from aiofiles.os import path as aiopath
 from time import time
 from tenacity import retry, wait_exponential, stop_after_attempt, retry_if_exception_type
-from aiohttp import ClientSession 
+from aiohttp import ClientSession
 from aiohttp.client_exceptions import ContentTypeError
 
 from bot import LOGGER, user_data
@@ -21,13 +21,13 @@ class ProgressFileReader(BufferedReader):
         super().__init__(open(filename, "rb"))
         self.__read_callback = read_callback
         self.length = Path(filename).stat().st_size
-        
+
     def read(self, size=None):
         size = size or (self.length - self.tell())
         if self.__read_callback:
             self.__read_callback(self.tell())
         return super().read(size)
-        
+
 
 class DDLUploader:
     def __init__(self, listener=None, name=None, path=None):
@@ -45,16 +45,16 @@ class DDLUploader:
         self.__engine = 'DDL v1'
         self.__asyncSession = None
         self.__user_id = self.__listener.message.from_user.id
-    
+
     async def __user_settings(self):
         user_dict = user_data.get(self.__user_id, {})
         self.__ddl_servers = user_dict.get('ddl_servers', {})
-        
+
     def __progress_callback(self, current):
         chunk_size = current - self.last_uploaded
         self.last_uploaded = current
         self.__processed_bytes += chunk_size
-    
+
     @retry(wait=wait_exponential(multiplier=2, min=4, max=8), stop=stop_after_attempt(3),
         retry=retry_if_exception_type(Exception))
     async def upload_aiohttp(self, url, file_path, req_file, data):
@@ -131,7 +131,7 @@ class DDLUploader:
     @property
     def processed_bytes(self):
         return self.__processed_bytes
-    
+
     @property
     def engine(self):
         return self.__engine

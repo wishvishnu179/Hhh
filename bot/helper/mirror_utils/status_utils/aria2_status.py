@@ -51,7 +51,7 @@ class Aria2Status:
 
     def eta(self):
         return self.__download.eta_string()
-        
+
     def listener(self):
         return self.__listener
 

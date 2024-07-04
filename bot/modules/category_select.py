@@ -21,7 +21,7 @@ async def change_category(client, message):
     text = message.text.split('\n')
     input_list = text[0].split(' ')
 
-    arg_base = {'link': '', 
+    arg_base = {'link': '',
                 '-id': '',
                 '-index': ''}
 

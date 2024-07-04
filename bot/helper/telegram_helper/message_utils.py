@@ -214,8 +214,8 @@ async def delete_links(message):
         if reply_to := message.reply_to_message:
             await deleteMessage(reply_to)
         await deleteMessage(message)
-        
-        
+
+
 async def delete_all_messages():
     async with status_reply_dict_lock:
         for key, data in list(status_reply_dict.items()):
@@ -322,7 +322,7 @@ async def sendStatusMessage(msg):
         status_reply_dict[chat_id] = [message, time()]
         if not Interval:
             Interval.append(setInterval(config_dict['STATUS_UPDATE_INTERVAL'], update_all_messages))
-    
+
 
 async def open_category_btns(message):
     user_id = message.from_user.id
@@ -353,8 +353,8 @@ async def open_category_btns(message):
         await editMessage(prompt, "<b>Task Cancelled</b>")
     del bot_cache[msg_id]
     return drive_id, index_link, is_cancelled
-    
-    
+
+
 async def open_dump_btns(message):
     user_id = message.from_user.id
     msg_id = message.id

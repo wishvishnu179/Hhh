@@ -34,17 +34,17 @@ async def driveclean(_, message):
     buttons.ibutton('Permanent Clean', f'gdclean clear {drive_id}')
     buttons.ibutton('Stop GDrive Clean', 'gdclean stop', 'footer')
     await editMessage(clean_msg, f'''⌬ <b><i>GDrive Clean/Trash :</i></b>
-    
+
 ┎ <b>Name:</b> {name}
 ┃ <b>Size:</b> {get_readable_file_size(size)}
 ┖ <b>Files:</b> {files} | <b>Folders:</b> {folders}
-    
+
 <b>NOTES:</b>
 <i>1. All files are permanently deleted if Permanent Del, not moved to trash.
 2. Folder doesn't gets Deleted.
 3. Delete files of custom folder via giving link along with cmd, but it should have delete permissions.
 4. Move to Bin Moves all your files to trash but can be restored again if have permissions.</i>
-    
+
 <code>Choose the Required Action below to Clean your Drive!</code>''', buttons.build_menu(2))
 
 
@@ -66,7 +66,7 @@ async def drivecleancb(_, query):
         await query.answer()
         await editMessage(message, '⌬ <b>DriveClean Stopped!</b>')
         await auto_delete_message(message, message)
-        
+
 
 bot.add_handler(MessageHandler(driveclean, filters=command(BotCommands.GDCleanCommand) & CustomFilters.owner))
 bot.add_handler(CallbackQueryHandler(drivecleancb, filters=regex(r'^gdclean')))

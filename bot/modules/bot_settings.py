@@ -48,7 +48,7 @@ default_values = {'AUTO_DELETE_MESSAGE_DURATION': 30,
                   'GD_INFO': 'Uploaded by WZML-X',
                   }
 bool_vars = ['AS_DOCUMENT', 'BOT_PM', 'STOP_DUPLICATE', 'SET_COMMANDS', 'SAVE_MSG', 'SHOW_MEDIAINFO', 'SOURCE_LINK', 'SAFE_MODE', 'SHOW_EXTRA_CMDS',
-             'IS_TEAM_DRIVE', 'USE_SERVICE_ACCOUNTS', 'WEB_PINCODE', 'EQUAL_SPLITS', 'DISABLE_DRIVE_LINK', 'DELETE_LINKS', 'CLEAN_LOG_MSG', 'USER_TD_MODE', 
+             'IS_TEAM_DRIVE', 'USE_SERVICE_ACCOUNTS', 'WEB_PINCODE', 'EQUAL_SPLITS', 'DISABLE_DRIVE_LINK', 'DELETE_LINKS', 'CLEAN_LOG_MSG', 'USER_TD_MODE',
              'INCOMPLETE_TASK_NOTIFIER', 'UPGRADE_PACKAGES', 'SCREENSHOTS_MODE']
 
 
@@ -70,7 +70,7 @@ async def load_config():
 
     BOT_MAX_TASKS = environ.get('BOT_MAX_TASKS', '')
     BOT_MAX_TASKS = int(BOT_MAX_TASKS) if BOT_MAX_TASKS.isdigit() else ''
-    
+
     OWNER_ID = environ.get('OWNER_ID', '')
     OWNER_ID = config_dict['OWNER_ID'] if len(OWNER_ID) == 0 else int(OWNER_ID)
 
@@ -115,7 +115,7 @@ async def load_config():
         aid = SUDO_USERS.split()
         for id_ in aid:
             user_data[int(id_.strip())] = {'is_sudo': True}
-            
+
     BLACKLIST_USERS = environ.get('BLACKLIST_USERS', '')
     if len(BLACKLIST_USERS) != 0:
         aid = BLACKLIST_USERS.split()
@@ -136,11 +136,11 @@ async def load_config():
     if len(MEGA_EMAIL) == 0 or len(MEGA_PASSWORD) == 0:
         MEGA_EMAIL = ''
         MEGA_PASSWORD = ''
-      
+
     GDTOT_CRYPT = environ.get('GDTOT_CRYPT', '')
     if len(GDTOT_CRYPT) == 0:
         GDTOT_CRYPT = ''
-        
+
     JIODRIVE_TOKEN = environ.get('JIODRIVE_TOKEN', '')
     if len(JIODRIVE_TOKEN) == 0:
         JIODRIVE_TOKEN = ''
@@ -148,7 +148,7 @@ async def load_config():
     REAL_DEBRID_API = environ.get('REAL_DEBRID_API', '')
     if len(REAL_DEBRID_API) == 0:
         REAL_DEBRID_API = ''
-        
+
     DEBRID_LINK_API = environ.get('DEBRID_LINK_API', '')
     if len(DEBRID_LINK_API) == 0:
         DEBRID_LINK_API = ''
@@ -164,7 +164,7 @@ async def load_config():
     CAP_FONT = environ.get('CAP_FONT', '').lower()
     if CAP_FONT.strip() not in ['', 'b', 'i', 'u', 's', 'spoiler', 'code']:
         CAP_FONT = 'code'
-        
+
     LEECH_FILENAME_PREFIX = environ.get('LEECH_FILENAME_PREFIX', '')
     if len(LEECH_FILENAME_PREFIX) == 0:
         LEECH_FILENAME_PREFIX = ''
@@ -192,7 +192,7 @@ async def load_config():
     MIRROR_FILENAME_REMNAME = environ.get('MIRROR_FILENAME_REMNAME', '')
     if len(MIRROR_FILENAME_REMNAME) == 0:
         MIRROR_FILENAME_REMNAME = ''
-        
+
     SEARCH_PLUGINS = environ.get('SEARCH_PLUGINS', '')
     if len(SEARCH_PLUGINS) == 0:
         SEARCH_PLUGINS = ''
@@ -297,7 +297,7 @@ async def load_config():
 
     AS_DOCUMENT = environ.get('AS_DOCUMENT', '')
     AS_DOCUMENT = AS_DOCUMENT.lower() == 'true'
-    
+
     USER_TD_MODE = environ.get('USER_TD_MODE', '')
     USER_TD_MODE = USER_TD_MODE.lower() == 'true'
 
@@ -306,10 +306,10 @@ async def load_config():
 
     SHOW_MEDIAINFO = environ.get('SHOW_MEDIAINFO', '')
     SHOW_MEDIAINFO = SHOW_MEDIAINFO.lower() == 'true'
-    
+
     SHOW_MEDIAINFO = environ.get('SHOW_MEDIAINFO', '')
     SHOW_MEDIAINFO = SHOW_MEDIAINFO.lower() == 'true'
-    
+
     SOURCE_LINK = environ.get('SOURCE_LINK', '')
     SOURCE_LINK = SOURCE_LINK.lower() == 'true'
 
@@ -351,7 +351,7 @@ async def load_config():
     UPSTREAM_REPO = environ.get('UPSTREAM_REPO', '')
     if len(UPSTREAM_REPO) == 0:
         UPSTREAM_REPO = ''
-        
+
     UPGRADE_PACKAGES = environ.get('UPGRADE_PACKAGES', '')
     UPGRADE_PACKAGES = UPGRADE_PACKAGES.lower() == 'true'
 
@@ -387,18 +387,18 @@ async def load_config():
     FSUB_IDS = environ.get('FSUB_IDS', '')
     if len(FSUB_IDS) == 0:
         FSUB_IDS = ''
-    
+
     LINKS_LOG_ID = environ.get('LINKS_LOG_ID', '')
     LINKS_LOG_ID = '' if len(LINKS_LOG_ID) == 0 else int(LINKS_LOG_ID)
 
     MIRROR_LOG_ID = environ.get('MIRROR_LOG_ID', '')
     if len(MIRROR_LOG_ID) == 0:
         MIRROR_LOG_ID = ''
-        
+
     LEECH_LOG_ID = environ.get('LEECH_LOG_ID', '')
     if len(LEECH_LOG_ID) == 0:
         LEECH_LOG_ID = ''
-        
+
     EXCEP_CHATS = environ.get('EXCEP_CHATS', '')
     if len(EXCEP_CHATS) == 0:
         EXCEP_CHATS = ''
@@ -433,7 +433,7 @@ async def load_config():
 
     IMG_SEARCH = environ.get('IMG_SEARCH', '')
     IMG_SEARCH = (IMG_SEARCH.replace("'", '').replace('"', '').replace('[', '').replace(']', '').replace(",", "")).split()
-    
+
     IMG_PAGE = environ.get('IMG_PAGE', '')
     IMG_PAGE = int(IMG_PAGE) if IMG_PAGE.isdigit() else ''
 
@@ -451,7 +451,7 @@ async def load_config():
     TITLE_NAME = environ.get('TITLE_NAME', '')
     if len(TITLE_NAME) == 0:
         TITLE_NAME = 'WeebZone-X'
-        
+
     COVER_IMAGE = environ.get('COVER_IMAGE', '')
     if len(COVER_IMAGE) == 0:
         COVER_IMAGE = 'https://graph.org/file/60f9f8bcb97d27f76f5c0.jpg'
@@ -465,19 +465,19 @@ async def load_config():
 
     SET_COMMANDS = environ.get('SET_COMMANDS', '')
     SET_COMMANDS = SET_COMMANDS.lower() == 'true'
-    
+
     SAFE_MODE = environ.get('SAFE_MODE', '')
     SAFE_MODE = SAFE_MODE.lower() == 'true'
-    
+
     SCREENSHOTS_MODE = environ.get('SCREENSHOTS_MODE', '')
     SCREENSHOTS_MODE = SCREENSHOTS_MODE.lower() == 'true'
 
     CLEAN_LOG_MSG = environ.get('CLEAN_LOG_MSG', '')
     CLEAN_LOG_MSG = CLEAN_LOG_MSG.lower() == 'true'
-    
+
     SHOW_EXTRA_CMDS = environ.get('SHOW_EXTRA_CMDS', '')
     SHOW_EXTRA_CMDS = SHOW_EXTRA_CMDS.lower() == 'true'
-    
+
     TOKEN_TIMEOUT = environ.get('TOKEN_TIMEOUT', '')
     TOKEN_TIMEOUT = int(TOKEN_TIMEOUT) if TOKEN_TIMEOUT.isdigit() else ''
 
@@ -536,11 +536,11 @@ async def load_config():
 <b>Story Line:</b> {synopsis}
 
 <a href='{url}'>Read More ...</a>'''
-    
+
     TIMEZONE = environ.get('TIMEZONE', '')
     if len(TIMEZONE) == 0:
         TIMEZONE = 'Asia/Kolkata'
-        
+
     list_drives_dict.clear()
     if GDRIVE_ID:
         list_drives_dict['Main'] = {"drive_id": GDRIVE_ID, "index_link": INDEX_URL}
@@ -723,7 +723,7 @@ async def get_buttons(key=None, edit_type=None, edit_mode=None, mess=None):
         buttons.ibutton('Back', "botset back")
         buttons.ibutton('Close', "botset close")
         msg = '''<u>Send any of these private files:</u>
-        
+
 <code>config.env, token.pickle, accounts.zip, list_drives.txt, categories.txt, shorteners.txt, cookies.txt, terabox.txt, .netrc or any other file!</code>
 
 <i>To delete private file send only the file name as text message with or without extension.</i>

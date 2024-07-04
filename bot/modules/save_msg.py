@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-from pyrogram.types import InlineKeyboardMarkup 
+from pyrogram.types import InlineKeyboardMarkup
 from pyrogram.handlers import CallbackQueryHandler
 from pyrogram.filters import regex
 from asyncio import sleep

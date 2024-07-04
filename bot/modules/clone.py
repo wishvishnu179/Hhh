@@ -182,8 +182,8 @@ async def gdcloneNode(message, link, listen_up):
 async def clone(client, message):
     input_list = message.text.split(' ')
 
-    arg_base = {'link': '', 
-                '-i': 0, 
+    arg_base = {'link': '',
+                '-i': 0,
                 '-up': '', '-upload': '',
                 '-rcf': '',
                 '-id': '',
@@ -288,6 +288,6 @@ async def clone(client, message):
             return
         await gdcloneNode(message, link, [tag, drive_id, index_link])
     await delete_links(message)
-    
+
 bot.add_handler(MessageHandler(clone, filters=command(
     BotCommands.CloneCommand) & CustomFilters.authorized & ~CustomFilters.blacklisted))

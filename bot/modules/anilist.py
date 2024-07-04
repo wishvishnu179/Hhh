@@ -170,8 +170,8 @@ query ($id: Int, $search: String) {
 """
 
 manga_query = """
-query ($id: Int,$search: String) { 
-    Media (id: $id, type: MANGA,search: $search) { 
+query ($id: Int,$search: String) {
+    Media (id: $id, type: MANGA,search: $search) {
         id
         title {
             romaji
@@ -256,7 +256,7 @@ async def anilist(_, msg, aniid=None, u_id=None):
             trailer = f"https://youtu.be/{trailer.get('id')}"
         postup = datetime.fromtimestamp(animeResp['updatedAt']).strftime('%d %B, %Y')
         description = animeResp.get('description', 'N/A')
-        if len(description) > 500:  
+        if len(description) > 500:
             description = f"{description[:500]}...."
         popularity = animeResp['popularity'] or ''
         trending = animeResp['trending'] or ''
@@ -290,8 +290,8 @@ async def anilist(_, msg, aniid=None, u_id=None):
             await sendMessage(msg, template, btns.build_menu(3), photo=title_img)
         except Exception:
             await sendMessage(msg, template, btns.build_menu(3), photo='https://te.legra.ph/file/8a5155c0fc61cc2b9728c.jpg')
-  
-  
+
+
 async def setAnimeButtons(client, query):
     message = query.message
     user_id = query.from_user.id
@@ -349,7 +349,7 @@ async def character(_, message, aniid=None, u_id=None):
     if not aniid:
         search = message.text.split(' ', 1)
         if len(search) == 1:
-            await sendMessage(message, '<b>Format :</b>\n<code>/character</code> <i>[search AniList Character]</i>') 
+            await sendMessage(message, '<b>Format :</b>\n<code>/character</code> <i>[search AniList Character]</i>')
             return
         vars = {'search': search[1]}
         user_id = message.from_user.id
@@ -371,16 +371,16 @@ async def character(_, message, aniid=None, u_id=None):
             btn.ibutton("🔍 View Spoiler", f"cha {user_id} spoil {siteid}")
             rlp_mk = btn.build_menu(1)
             description = description.split('~!', 1)[0]
-        if len(description) > 700:  
+        if len(description) > 700:
             description = f"{description[:700]}...."
         msg += markdown(description).replace('<p>', '').replace('</p>', '')
         if image := json.get('image', None):
             img = image.get('large')
         if aniid:
             return msg, rlp_mk
-        if img: 
+        if img:
             await sendMessage(message, msg, rlp_mk, img)
-        else: 
+        else:
             await sendMessage(message, msg)
 
 
@@ -409,7 +409,7 @@ async def setCharacButtons(client, query):
 async def manga(_, message):
     search = message.text.split(' ', 1)
     if len(search) == 1:
-        await sendMessage(message, '<b>Format :</b>\n<code>/manga</code> <i>[search manga]</i>') 
+        await sendMessage(message, '<b>Format :</b>\n<code>/manga</code> <i>[search manga]</i>')
         return
     search = search[1]
     variables = {'search': search}

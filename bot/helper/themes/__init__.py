@@ -22,7 +22,7 @@ def BotTheme(var_name, **format_vars):
         rantheme = rchoice(list(AVL_THEMES.values()))
         LOGGER.info(f"Random Theme Chosen: {rantheme}")
         text = getattr(rantheme.WZMLStyle(), var_name, None)
-        
+
     if text is None:
         text = getattr(wzml_minimal.WZMLStyle(), var_name)
 

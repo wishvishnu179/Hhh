@@ -138,7 +138,7 @@ class Gofile:
     async def upload(self, file_path):
         if not await self.is_goapi(self.token):
             raise Exception("Invalid Gofile API Key, Recheck your account !!")
-        
+
         if await aiopath.isfile(file_path):
             if (gCode := await self.upload_file(path=file_path)) and gCode.get(
                 "downloadPage", False
@@ -198,7 +198,7 @@ class Gofile:
     async def copy_content(self, contentsId, folderIdDest):
         if self.token is None:
             raise Exception("Invalid Gofile API Key, Recheck your account !!")
-        
+
         async with ClientSession() as session:
             async with session.post(
                 url=f"{self.api_url}contents/copy",
@@ -213,11 +213,10 @@ class Gofile:
     async def delete_content(self, contentId):
         if self.token is None:
             raise Exception("Invalid Gofile API Key, Recheck your account !!")
-        
+
         async with ClientSession() as session:
             async with session.delete(
                 url=f"{self.api_url}contents/{contentId}",
                 data={"token": self.token},
             ) as resp:
                 return await self.__resp_handler(await resp.json())
-                

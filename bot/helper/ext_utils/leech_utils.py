@@ -139,7 +139,7 @@ async def take_ss(video_file, duration=None, total=1, gen_ss=False):
            "-i", video_file, "-vf", "thumbnail", "-frames:v", "1", des_dir]
     tstamps = {}
     thumb_sem = Semaphore(3)
-    
+
     async def extract_ss(eq_thumb):
         async with thumb_sem:
             cmd[5] = str((duration // total) * eq_thumb)
@@ -147,10 +147,10 @@ async def take_ss(video_file, duration=None, total=1, gen_ss=False):
             cmd[-1] = ospath.join(des_dir, f"wz_thumb_{eq_thumb}.jpg")
             task = await create_subprocess_exec(*cmd, stderr=PIPE)
             return (task, await task.wait(), eq_thumb)
-    
+
     tasks = [extract_ss(eq_thumb) for eq_thumb in range(1, total+1)]
     status = await gather(*tasks)
-    
+
     for task, rtype, eq_thumb in status:
         if rtype != 0 or not await aiopath.exists(ospath.join(des_dir, f"wz_thumb_{eq_thumb}.jpg")):
             err = (await task.stderr.read()).decode().strip()
@@ -248,10 +248,10 @@ async def format_filename(file_, user_id, dirpath=None, isMirror=False):
     remname = config_dict[f'{ctag}_FILENAME_REMNAME'] if (val:=user_dict.get(f'{ftag}remname', '')) == '' else val
     suffix = config_dict[f'{ctag}_FILENAME_SUFFIX'] if (val:=user_dict.get(f'{ftag}suffix', '')) == '' else val
     lcaption = config_dict['LEECH_FILENAME_CAPTION'] if (val:=user_dict.get('lcaption', '')) == '' else val
- 
+
     prefile_ = file_
     file_ = re_sub(r'www\S+', '', file_)
-        
+
     if remname:
         if not remname.startswith('|'):
             remname = f"|{remname}"
@@ -297,7 +297,7 @@ async def format_filename(file_, user_id, dirpath=None, isMirror=False):
 
     cap_mono =  f"<{config_dict['CAP_FONT']}>{nfile_}</{config_dict['CAP_FONT']}>" if config_dict['CAP_FONT'] else nfile_
     if lcaption and dirpath and not isMirror:
-        
+
         def lowerVars(match):
             return f"{{{match.group(1).lower()}}}"
 

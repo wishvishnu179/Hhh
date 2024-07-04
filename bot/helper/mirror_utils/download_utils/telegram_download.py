@@ -74,7 +74,7 @@ class TelegramDownloadHelper:
         try:
             if self.__client is None and self.__decrypter is not None:
                 try:
-                    async with Client(str(self.__listener.user_id), session_string=self.__decrypter.decrypt(self.__listener.user_dict.get('usess')).decode(), 
+                    async with Client(str(self.__listener.user_id), session_string=self.__decrypter.decrypt(self.__listener.user_dict.get('usess')).decode(),
                                     in_memory=True, no_updates=True) as self.__client:
                         download = await self.__client.download_media(message=message, file_name=path, progress=self.__onDownloadProgress)
                 except Exception as e:
@@ -106,7 +106,7 @@ class TelegramDownloadHelper:
             self.__decrypter = decrypter
 
         media = getattr(message, message.media.value) if message.media else None
-        
+
         if media is not None:
             async with global_lock:
                 download = media.file_unique_id not in GLOBAL_GID

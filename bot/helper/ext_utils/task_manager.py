@@ -34,11 +34,11 @@ async def stop_duplicate_check(name, listener):
             button = await get_telegraph_list(telegraph_content)
             return msg, button
     return False, None
-    
+
 
 async def timeval_check(user_id):
     bot_cache.setdefault('time_interval', {})
-    if (time_interval := bot_cache['time_interval'].get(user_id, False)) and (time() - time_interval) < (UTI := config_dict['USER_TIME_INTERVAL']): 
+    if (time_interval := bot_cache['time_interval'].get(user_id, False)) and (time() - time_interval) < (UTI := config_dict['USER_TIME_INTERVAL']):
         return UTI - (time() - time_interval)
     bot_cache['time_interval'][user_id] = time()
     return None
@@ -127,7 +127,7 @@ async def start_from_queued():
 
 async def limit_checker(size, listener, isTorrent=False, isMega=False, isDriveLink=False, isYtdlp=False, isPlayList=None):
     LOGGER.info('Checking Size Limit of link/file/folder/tasks...')
-    user_id = listener.message.from_user.id 
+    user_id = listener.message.from_user.id
     if await CustomFilters.sudo('', listener.message):
         return
     limit_exceeded = ''
@@ -169,7 +169,7 @@ async def limit_checker(size, listener, isTorrent=False, isMega=False, isDriveLi
             limit = LEECH_LIMIT * 1024**3
             if size > limit:
                 limit_exceeded = f'Leech limit is {get_readable_file_size(limit)}'
-        
+
         if (STORAGE_THRESHOLD := config_dict['STORAGE_THRESHOLD']) and not listener.isClone:
             arch = any([listener.compress, listener.extract])
             limit = STORAGE_THRESHOLD * 1024**3

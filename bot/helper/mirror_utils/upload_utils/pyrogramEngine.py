@@ -56,7 +56,7 @@ class TgUploader:
         self.__user_id = listener.message.from_user.id
         self.__leechmsg = {}
         self.__leech_utils = self.__listener.leech_utils
-        
+
     async def get_custom_thumb(self, thumb):
         if is_telegram_link(thumb):
             try:
@@ -117,7 +117,7 @@ class TgUploader:
         except Exception as err:
             if not self.__is_cancelled:
                 LOGGER.error(f"Failed To Send in BotPM:\n{str(err)}")
-        
+
         try:
             if len(self.__leechmsg) > 1 and not self.__listener.excep_chat:
                 for chat_id, msg in list(self.__leechmsg.items())[1:]:
@@ -136,7 +136,7 @@ class TgUploader:
         except Exception as err:
             if not self.__is_cancelled:
                 LOGGER.error(f"Failed To Send in Leech Log [ {chat_id} ]:\n{str(err)}")
-        
+
         try:
             if self.__upload_dest:
                 for channel_id in self.__upload_dest:
@@ -379,7 +379,7 @@ class TgUploader:
 
             if self.__leech_utils['thumb']:
                 thumb = await self.get_custom_thumb(self.__leech_utils['thumb'])
-            
+
             if not is_image and thumb is None:
                 file_name = ospath.splitext(file)[0]
                 thumb_path = f"{self.__path}/yt-dlp-thumb/{file_name}.jpg"
@@ -404,7 +404,7 @@ class TgUploader:
                                                                        disable_notification=True,
                                                                        progress=self.__upload_progress,
                                                                        reply_markup=buttons)
-                
+
                 if self.__prm_media and (self.__has_buttons or not self.__leechmsg):
                     try:
                         self.__sent_msg = await bot.copy_message(nrml_media.chat.id, nrml_media.chat.id, nrml_media.id, reply_to_message_id=self.__sent_msg.id, reply_markup=buttons)

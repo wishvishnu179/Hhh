@@ -156,12 +156,12 @@ async def rmBlackList(_, message):
     else:
         msg = "Give ID or Reply To message of whom you want to remove from blacklisted"
     await sendMessage(message, msg)
-    
-    
+
+
 async def black_listed(_, message):
     await sendMessage(message, "<i>BlackListed Detected, Restricted from Bot</i>")
-    
-    
+
+
 bot.add_handler(MessageHandler(authorize, filters=command(
     BotCommands.AuthorizeCommand) & CustomFilters.sudo))
 bot.add_handler(MessageHandler(unauthorize, filters=command(
@@ -176,4 +176,3 @@ bot.add_handler(MessageHandler(rmBlackList, filters=command(
     BotCommands.RmBlackListCommand) & CustomFilters.sudo))
 bot.add_handler(MessageHandler(black_listed, filters=regex(r'^/')
     & CustomFilters.authorized & CustomFilters.blacklisted))
-    

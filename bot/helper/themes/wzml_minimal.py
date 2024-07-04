@@ -56,7 +56,7 @@ class WZMLStyle:
 ┃ <b>Total Disk Read :</b> {disk_read}
 ┃ <b>Total Disk Write :</b> {disk_write}
 ┖ <b>U :</b> {disk_u} | <b>F :</b> {disk_f} | <b>T :</b> {disk_t}
-    
+
     '''
     SYS_STATS = '''⌬ <b><i>OS SYSTEM :</i></b>
 ┠ <b>OS Uptime :</b> {os_uptime}
@@ -130,7 +130,7 @@ class WZMLStyle:
 ------------------------------------------
 {Source}
 ------------------------------------------\n\n"""
-    
+
     # async def __msg_to_reply(self): ---> pyrogramEngine.py
     PM_START =            "➲ <b><u>Task Started :</u></b>\n┃\n┖ <b>Link:</b> <a href='{msg_link}'>Click Here</a>"
     L_LOG_START =           "➲ <b><u>Leech Started :</u></b>\n┃\n┠ <b>User :</b> {mention} ( #ID{uid} )\n┖ <b>Source :</b> <a href='{msg_link}'>Click Here</a>"
@@ -148,7 +148,7 @@ class WZMLStyle:
     PM_BOT_MSG =            '➲ <b><i>File(s) have been Sent above</i></b>'
     L_BOT_MSG =             '➲ <b><i>File(s) have been Sent to Bot PM (Private)</i></b>'
     L_LL_MSG =              '➲ <b><i>File(s) have been Sent. Access via Links...</i></b>\n'
-    
+
     # ----- MIRROR -------
     M_TYPE =                '┠ <b>Type: </b>{Mimetype}\n'
     M_SUBFOLD =             '┠ <b>SubFolders: </b>{Folder}\n'
@@ -244,16 +244,16 @@ class WZMLStyle:
 
     # async def mirror_status(_, message): ----> status.py
     NO_ACTIVE_DL = '''<i>No Active Downloads!</i>
-    
+
 ⌬ <b><i>Bot Stats</i></b>
 ┠ <b>CPU:</b> {cpu}% | <b>F:</b> {free} [{free_p}%]
 ┖ <b>RAM:</b> {ram} | <b>UPTIME:</b> {uptime}
     '''
     # ---------------------
 
-    # USER Setting --> user_setting.py 
+    # USER Setting --> user_setting.py
     USER_SETTING = '''㊂ <b><u>User Settings :</u></b>
-        
+
 ┎<b> Name :</b> {NAME} ( <code>{ID}</code> )
 ┠<b> Username :</b> {USERNAME}
 ┠<b> Telegram DC :</b> {DC}

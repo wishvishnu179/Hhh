@@ -45,7 +45,7 @@
     - Improve aria.sh
     - Fix all download listener functions and status
     - Edit Global Options while bot running from bot settings
-        
+
     </details></li>
     <li><details>
       <summary><b>TG Upload/Download</b></summary>
@@ -61,7 +61,7 @@
     - Ability to leech splitted file parts in media group. Setting for each user
     - Download using premium account if available
     - Download restricted messages (document or link) by tg private/public/super links
-        
+
     </details></li>
     <li><details>
       <summary><b>DDL Upload</b></summary>
@@ -70,7 +70,7 @@
       - Gofile.io
       - Streamtape.com
     - Upload on multiple sites at a time
-    - User api/key is need for the upload        
+    - User api/key is need for the upload
     </details></li>
     <li><details>
       <summary><b>Google Drive</b></summary>
@@ -100,7 +100,7 @@
     </details></li>
     <li><details>
       <summary><b>yt-dlp</b></summary>
-        
+
     - Switch from youtube-dl to yt-dlp and fix all conflicts
     - Yt-dlp quality buttons
     - Ability to use specific yt-dlp option for each task
@@ -162,7 +162,7 @@
 
     </details></li></ol>
 </details>
-    
+
 <details>
     <summary><b>Overall Features</b></summary>
 
@@ -252,12 +252,12 @@ sudo pacman -S docker python
 ```
 pip3 install -r requirements-cli.txt
 ```
-    
+
   </details></li>
   <li><details>
     <summary>Setting up config file</summary>
 
-    
+
 ```
 cp config_sample.env config.env
 ```
@@ -379,10 +379,10 @@ sudo docker image prune -a
 ```
 
 5. Check the number of processing units of your machine with `nproc` cmd and times it by 4, then edit `AsyncIOThreadsCount` in qBittorrent.conf.
-    
+
   </details></li></ol>
 </details>
-    
+
 ------
 
 ### 🤖 ***Bot Commands***
@@ -522,7 +522,7 @@ help - All cmds with description
     - `LEECH_LOG_ID`: Chat ID to where leeched files would be uploaded. `Int`. **NOTE**: Only available for superGroup/channel. Add `-100` before channel/superGroup id. In short don't add bot id or your id!. For topic support make this format `chat_id:topic_id`
     - `MIRROR_LOG_ID`: Chat ID to where Mirror files would be Send. `Int`. **NOTE**: Only available for superGroup/channel. Add `-100` before channel/superGroup id. In short don't add bot id or your id!. For topic support make this format `chat_id:topic_id`
     - `LINKS_LOG_ID`: Chat ID to where Link logs would be Send. `Int`. **NOTE**: Only available for superGroup/channel. Add `-100` before channel/superGroup id. In short don't add bot id or your id!.
-      - **Note**: LEECH_LOG_ID & MIRROR_LOG_ID it's multiple, For multiple id Separate them by space. 
+      - **Note**: LEECH_LOG_ID & MIRROR_LOG_ID it's multiple, For multiple id Separate them by space.
       - **Warning**: leech log is multiple only in case of channel. i.e it doesn't support multiple Topics (for now)
     </details></li>
 
@@ -534,7 +534,7 @@ help - All cmds with description
     - `BASE_URL_PORT`: Which is the **BASE_URL** Port. Default is `80`. `Int`
     - `WEB_PINCODE`: Whether to ask for pincode before selecting files from torrent in web or not. Default is `False`. `Bool`.
       - **Qbittorrent NOTE**: If your facing ram issues then set limit for `MaxConnections`, decrease `AsyncIOThreadsCount`, set limit of `DiskWriteCacheSize` to `32` and decrease `MemoryWorkingSetLimit` from qbittorrent.conf or bsetting command.
-        
+
     </details></li>
     <li><details>
         <summary><b>RSS</b></summary>
@@ -576,7 +576,7 @@ help - All cmds with description
     - `LEECH_LIMIT`: To limit the Torrent/Direct/ytdlp leech size. the default unit is `GB`. `Int`
     - `MEGA_LIMIT`: To limit the size of Mega download. the default unit is `GB`. `Int`
     - `STORAGE_THRESHOLD`: To leave specific storage free and any download will lead to leave free storage less than this value will be cancelled the default unit is `GB`. `Int`
-    - `USER_TIME_INTERVAL`: Time Gap between two consecutive link/file mirror/leech operations. The default value is set to `0` seconds. unit is `sec`. `int` 
+    - `USER_TIME_INTERVAL`: Time Gap between two consecutive link/file mirror/leech operations. The default value is set to `0` seconds. unit is `sec`. `int`
     </details></li>
 
     <li><details>
@@ -589,7 +589,7 @@ help - All cmds with description
 
     <li><details>
         <summary><b>Telegraph</b></summary>
-        
+
     - `TITLE_NAME`: Title `name` for Telegraph pages (while using /list command)
     - `AUTHOR_NAME`: Author `name` for Telegraph pages
     - `AUTHOR_URL`: Author `URL` for Telegraph page
@@ -598,8 +598,8 @@ help - All cmds with description
 
     <li><details>
         <summary><b>Extra</b></summary>
-        
-    - `SAFE_MODE`: Include 
+
+    - `SAFE_MODE`: Include
       - Remove filename from the auth group
       - Remove Leech file index link from auth group (leech index directly send to BOT_PM)
       - Remove Mirror link from auth group (Link directly send to BOT_PM)
@@ -611,7 +611,7 @@ help - All cmds with description
     - `IMAGES`: Add multiple telgraph(graph.org) image links that are seperated by spaces.
     - `IMG_SEARCH`: Put Keyword to Download Images. Sperarte each name by , like `anime`, `iron man`, `god of war`
     - `IMG_PAGE`: Set the page value for downloading a image. Each page have approx 70 images. Deafult is `1`. `Int`
-    - `BOT_THEME`: Change the theme of bot. For now theme availabe is `minimal`. 
+    - `BOT_THEME`: Change the theme of bot. For now theme availabe is `minimal`.
       - You can make your own theme checkout this link https://t.ly/9rVXq
 
     - `EXCEP_CHATS`: `CHAT_ID` of a `SuperGroup` where you want to disable the logging feature for that specific group. Logging features will remain active in other authorized chats that have been filled. Add `-100` before superGroup id. In short don't add bot id or your id!.
@@ -627,7 +627,7 @@ help - All cmds with description
 
     <li><details>
         <summary><b>Token system</b></summary>
-        
+
     - `TOKEN_TIMEOUT`: Token timeout for each group member in sec. Default is `21600`. `Int`
     -  `LOGIN_PASS`: Permanent pass for user to skip the token system
     </details></li>
@@ -650,7 +650,7 @@ help - All cmds with description
 
 <details>
     <summary><b>View All Steps<b><sup><kbd>Click to Expand</kbd></sup></summary>
-    
+
 **NOTES**
 
 - Old authentication changed, now we can't use bot or replit to generate token.pickle. You need OS with a local browser. For example `Termux`.
@@ -672,16 +672,16 @@ help - All cmds with description
 pip3 install google-api-python-client google-auth-httplib2 google-auth-oauthlib
 python3 generate_drive_token.py
 ```
-    
+
 </details>
-    
+
 ------
 
 ### 🧾 ***Generate `rclone.conf`***
 
 <details>
     <summary><b>View All Steps<b><sup><kbd>Click to Expand</kbd></sup></summary>
-    
+
 1. Install rclone from [Official Site](https://rclone.org/install/)
 2. Create new remote(s) using `rclone config` command.
 3. Follow the Steps one by one to generate `rclone.conf`
@@ -690,18 +690,18 @@ python3 generate_drive_token.py
 - Sample `rclone.conf' :
 ```
 [Name]
-- root_id : 
+- root_id :
 ```
 
 </details>
-    
+
 ------
 
 ### 🔍 ***Multi Upload System***
 
 <details>
     <summary><b>View All Description<b><sup><kbd>Click to Expand</kbd></sup></summary>
-    
+
 - `RCLONE_PATH` is like `GDRIVE_ID` a default path for mirror. In additional to those variables `DEFAULT_UPLOAD` to choose the default tool whether it's rclone or google-api-python-client.
 - If `DEFAULT_UPLOAD` = 'rc' then you must fill `RCLONE_PATH` with path as default one or with `rcl` to select destination path on each new task.
 - If `DEFAULT_UPLOAD` = 'gd' then you must fill `GDRIVE_ID` with folder/TD id.
@@ -712,14 +712,14 @@ python3 generate_drive_token.py
 - So in short, -up has 5 possible values which are: gd(Upload to GDRIVE_ID), rc(Upload to RCLONE_PATH), ddl(Upload to User's Enabled DDL Servers), rcl(Select Rclone Path) and rclone_path(remote:path(owner rclone.conf) or mrcc:remote:path(user rclone.conf))
 
 </details>
-    
+
 ------
 
 ### 📃 ***UPSTREAM REPO (Recommended)***
 
 <details>
     <summary><b>View All Variables<b><sup><kbd>Click to Expand</kbd></sup></summary>
-    
+
 - `UPSTREAM_REPO` variable can be used for edit/add any file in repository.
 - You can add private/public repository link to grab/overwrite all files from it.
 - You can skip adding the privates files like token.pickle or accounts folder before deploying, simply fill `UPSTREAM_REPO` private one in case you want to grab all files including private files.
@@ -729,7 +729,7 @@ python3 generate_drive_token.py
 - The changes in your `UPSTREAM_REPO` will take affect only after restart.
 
 </details>
-    
+
 ------
 
 ### 🌱 ***Bittorrent Seed***
@@ -749,14 +749,14 @@ python3 generate_drive_token.py
 - Global options: `--seed-ratio` (0 means no limit) and `--seed-time` (0 means no seed) in aria.sh.
 
 </details>
-        
+
 ------
 
 ### 📈 ***Using Service Accounts (User Rate Limit)***
 
 <details>
     <summary><b>View All Notes<b><sup><kbd>Click to Expand</kbd></sup></summary>
-    
+
 >For Service Account to work, you must set `USE_SERVICE_ACCOUNTS` = "True" in config file or environment variables.
 >**NOTE**: Using Service Accounts is only recommended while uploading to a Team Drive.
 
@@ -856,16 +856,16 @@ Then add emails from emails.txt to Google Group, after that add this Google Grou
 ```
 python3 add_to_team_drive.py -d SharedTeamDriveSrcID
 ```
-    
+
 </details>
-    
+
 ------
 
 ### 📡 ***Generate MongoDB Database***
 
 <details>
     <summary><b>View All Steps<b><sup><kbd>Click to Expand</kbd></sup></summary>
-    
+
 1. Go to `https://mongodb.com/` and sign-up.
 2. Create Shared Cluster.
 3. Press on `Database` under `Deployment` Header, your created cluster will be there.
@@ -874,14 +874,14 @@ python3 add_to_team_drive.py -d SharedTeamDriveSrcID
 7. Copy your `connection string` and replace `<password>` with the password of your user, then press close.
 
 </details>
-    
+
 ------
 
 ### 🗃 ***Multi- Google Drive List***
 
 <details>
     <summary><b>View All Steps<b><sup><kbd>Click to Expand</kbd></sup></summary>
-    
+
 To use list from multi TD/folder. Run driveid.py in your terminal and follow it. It will generate **list_drives.txt** file or u can simply create `list_drives.txt` file in working directory and fill it, check below format:
 
 ```
@@ -919,11 +919,11 @@ ouo.io LYT0zBn1
 >exe.io, gplinks.in, shrinkme.io, urlshortx.com, shortzon.com, bit.ly, shorte.st, linkvertise.com, ouo.io, cutt.ly
 
 </details>
-        
+
 -----
-        
+
 ### 🎛 ***Extra Start Buttons***
-        
+
 <details>
     <summary><b>View All Notes<b><sup><kbd>Click to Expand</kbd></sup></summary>
 
@@ -934,20 +934,20 @@ button_name button_url
 ```
 Example:
 ```
-Repo_❤️ https://github.com/WZML-X 
+Repo_❤️ https://github.com/WZML-X
 Updates https://t.me/WZML_X
 ```
 - **Note**: If you want to add space in button name use `_` for add space
 
 </details>
-        
+
 -----
-        
+
 ### 🔐 ***yt-dlp and Aria2c Authentication Using `.netrc` File***
 
 <details>
     <summary><b>View All Steps<b><sup><kbd>Click to Expand</kbd></sup></summary>
-    
+
 For using your premium accounts in yt-dlp or for protected Index Links, create .netrc file according to following format:
 
 **Note**: Create .netrc and not netrc, this file will be hidden, so view hidden files to edit it after creation.
@@ -977,7 +977,7 @@ machine example.workers.dev password index_password
 Where host is the name of extractor (eg. instagram, Twitch). Multiple accounts of different hosts can be added each separated by a new line.
 
 </details>
-    
+
 -----
 
 ## 🏅 **Bot Authors**
@@ -990,4 +990,3 @@ Where host is the name of extractor (eg. instagram, Twitch). Multiple accounts o
 |Author and DDL, UI Design, More Customs..|Author and Wraps Up Features|Co-Author & Bug Tester|
 
 </details>
-

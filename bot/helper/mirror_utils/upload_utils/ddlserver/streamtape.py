@@ -82,7 +82,7 @@ class Streamtape:
                 if data.get("status") == 200:
                     return data.get("result")
         return None
-        
+
     async def rename(self, file_id, name):
         url = f"{self.base_url}/file/rename?login={self.__userLogin}&key={self.__passKey}&file={file_id}&name={name}"
         async with ClientSession() as session, session.get(url) as response:
@@ -91,7 +91,7 @@ class Streamtape:
                 if data.get("status") == 200:
                     return data.get("result")
         return None
-        
+
     async def list_telegraph(self, folder_id, nested=False):
         tg_html = ""
         contents = await self.list_folder(folder_id)
@@ -121,7 +121,7 @@ class Streamtape:
     async def upload_folder(self, folder_path, parent_folder_id=None):
         folder_name = Path(folder_path).name
         genfolder = await self.create_folder(name=folder_name, parent=parent_folder_id)
-    
+
         if genfolder and (newfid := genfolder.get("folderid")):
             for entry in await scandir(folder_path):
                 if entry.is_file():
@@ -132,7 +132,7 @@ class Streamtape:
                     self.dluploader.total_folders += 1
             return await self.list_telegraph(newfid)
         return None
-        
+
     async def upload(self, file_path):
         stlink = None
         if await aiopath.isfile(file_path):
@@ -144,5 +144,3 @@ class Streamtape:
         if self.dluploader.is_cancelled:
             return
         raise Exception("Failed to upload file/folder to StreamTape API, Retry! or Try after sometimes...")
-        
-        

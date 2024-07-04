@@ -116,7 +116,7 @@ class GoogleDriveHelper:
             return res.group(3)
         parsed = urlparse(link)
         return parse_qs(parsed.query)['id'][0]
-        
+
     @retry(wait=wait_exponential(multiplier=2, min=3, max=6), stop=stop_after_attempt(3),
            retry=retry_if_exception_type(Exception))
     def getFolderData(self, file_id):
@@ -190,7 +190,7 @@ class GoogleDriveHelper:
             LOGGER.error(f"Delete Result: {err}")
             msg = str(err)
         return msg
-        
+
     def driveclean(self, drive_id: str, trash: bool):
         msg = ''
         query = f"'{drive_id}' in parents and trashed = false"

@@ -27,9 +27,9 @@ async def genPyroString(client, message):
     global isStop
     session_dict.clear()
     sess_msg = await sendMessage(message, """⌬ <u><i><b>Pyrogram String Session Generator</b></i></u>
- 
+
 <i>Send your <code>API_ID</code> or <code>APP_ID</code>.
-Get from https://my.telegram.org</i>. 
+Get from https://my.telegram.org</i>.
 <b>Timeout:</b> 120s
 
 <i>Send /stop to Stop Process</i>""")
@@ -44,7 +44,7 @@ Get from https://my.telegram.org</i>.
             return await editMessage(sess_msg, "<i><code>APP_ID</code> is Invalid.</i>\n\n ⌬ <b>Process Stopped.</b>")
     await sleep(1.5)
     await editMessage(sess_msg, """⌬ <u><i><b>Pyrogram String Session Generator</b></i></u>
- 
+
 <i>Send your <code>API_HASH</code>. Get from https://my.telegram.org</i>.
 <b>Timeout:</b> 120s
 
@@ -59,7 +59,7 @@ Get from https://my.telegram.org</i>.
     while True:
         await sleep(1.5)
         await editMessage(sess_msg,  """⌬ <u><i><b>Pyrogram String Session Generator</b></i></u>
- 
+
 <i>Send your Telegram Account's Phone number in International Format ( Including Country Code ). <b>Example :</b> +14154566376</i>.
 <b>Timeout:</b> 120s
 
@@ -95,7 +95,7 @@ Get from https://my.telegram.org</i>.
         return await editMessage(sess_msg, "<b>Phone Number is Invalid. Retry Again</b>\n\n ⌬ <b>Process Stopped.</b>")
     await sleep(1.5)
     await editMessage(sess_msg, """⌬ <u><i><b>Pyrogram String Session Generator</b></i></u>
- 
+
 <i>OTP has been sent to your Phone Number, Enter OTP in <code>1 2 3 4 5</code> format. ( Space between each Digits )</i>
 <b>If any error or bot not responded, Retry Again.</b>
 <b>Timeout:</b> 120s
@@ -115,12 +115,12 @@ Get from https://my.telegram.org</i>.
     except SessionPasswordNeeded:
         await sleep(1.5)
         await editMessage(sess_msg, f"""⌬ <u><i><b>Pyrogram String Session Generator</b></i></u>
- 
+
  <i>Account is being Protected via <b>Two-Step Verification.</b> Send your Password below.</i>
  <b>Timeout:</b> 120s
- 
+
  <b>Password Hint</b> : {await pyro_client.get_password_hint()}
- 
+
  <i>Send /stop to Stop Process</i>""")
         await wrap_future(invoke(client, message, 'TWO_STEP_PASS'))
         if isStop:
@@ -145,7 +145,7 @@ Get from https://my.telegram.org</i>.
         await aioremove(f'WZML-X-{message.from_user.id}.session-journal')
     except Exception:
         pass
-    
+
 
 async def set_details(_, message, newkey):
     global isStop
@@ -183,12 +183,12 @@ async def get_decrypt_key(client, message):
         btn.ubutton("🔑 Unlock Session", f"https://t.me/{bot_name}")
         grp_prompt = await sendMessage(message, "<i>User Session (Pyrogram V2 Session) Access of your Account is needed for Message to Access, it can't be Accessed by Bot and Session</i>", btn.build_menu(1))
     prompt = await sendCustomMsg(user_id, "<b><u>DECRYPTION:</u></b>\n<i>• This Value is not stored anywhere, so you need to provide it everytime...\n\n</i><b><i>Send your Decrypt Key 🔑 ..</i></b>\n\n<b>Timeout:</b> 60s")
-    
+
     bot_cache[msg_id] = [True, '', False]
     async def set_details(_, message):
         await deleteMessage(message)
         bot_cache[msg_id] = [False, message.text, False]
-    
+
     start_time = time()
     handler = client.add_handler(MessageHandler(set_details, filters=user(user_id) & text & private), group=-1)
     while bot_cache[msg_id][0]:
@@ -198,7 +198,7 @@ async def get_decrypt_key(client, message):
             await editMessage(prompt, "<b>Decryption Key TimeOut.. Try Again</b>")
             bot_cache[msg_id][2] = True
     client.remove_handler(*handler)
-    
+
     _, key, is_cancelled = bot_cache[msg_id]
     if is_cancelled:
         await editMessage(prompt, "<b>Decrypt Key Invoke Cancelled</b>")
