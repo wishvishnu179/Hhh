@@ -42,7 +42,6 @@ from bot.helper.telegram_helper.message_utils import sendCustomMsg, sendMessage,
     delete_all_messages, delete_links, sendMultiMessage, update_all_messages
 from bot.helper.themes import BotTheme
 
-
 class MirrorLeechListener:
     def __init__(self, message, compress=False, extract=False, isQbit=False, isLeech=False, tag=None, select=False, seed=False, sameDir=None, rcFlags=None, upPath=None, isClone=False,
                 join=False, drive_id=None, index_link=None, isYtdlp=False, source_url=None, logMessage=None, leech_utils={}):
