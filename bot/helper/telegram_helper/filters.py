@@ -67,3 +67,4 @@ class CustomFilters:
         return bool(uid != OWNER_ID and uid in user_data and user_data[uid].get('is_blacklist'))
 
     blacklisted = create(blacklist_user)
+
