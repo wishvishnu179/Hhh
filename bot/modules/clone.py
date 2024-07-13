@@ -291,3 +291,4 @@ async def clone(client, message):
 
 bot.add_handler(MessageHandler(clone, filters=command(
     BotCommands.CloneCommand) & CustomFilters.authorized & ~CustomFilters.blacklisted))
+
