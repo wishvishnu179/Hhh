@@ -1,4 +1,4 @@
- from time import time, monotonic
+from time import time, monotonic
 from datetime import datetime
 from sys import executable
 from os import execl as osexecl
