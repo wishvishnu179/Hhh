@@ -11,7 +11,7 @@
                         RAPHIELSCAPE PUBLIC LICENSE
                             A-1. DEFINITIONS
 
-0. “This License” refers to version 1.c of the Raphielscape Public License.
+0. “This License”  refers to version 1.c of the Raphielscape Public License.
 
 1. “Copyright” also means copyright-like laws that apply to other kinds of works.
 
