@@ -6,6 +6,7 @@ from requests import get as rget
 from dotenv import load_dotenv, dotenv_values
 from pymongo import MongoClient
 
+
 if ospath.exists('log.txt'):
     with open('log.txt', 'r+') as f:
         f.truncate(0)
