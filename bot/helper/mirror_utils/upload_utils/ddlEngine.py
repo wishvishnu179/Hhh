@@ -142,3 +142,4 @@ class DDLUploader:
         if self.__asyncSession:
             await self.__asyncSession.close()
         await self.__listener.onUploadError('Your upload has been stopped!')
+
