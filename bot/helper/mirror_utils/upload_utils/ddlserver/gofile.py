@@ -10,7 +10,6 @@ from aiohttp import ClientSession
 
 from bot.helper.ext_utils.bot_utils import sync_to_async
 
-
 class Gofile:
     def __init__(self, dluploader=None, token=None):
         self.api_url = "https://api.gofile.io/"
