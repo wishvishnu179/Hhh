@@ -176,3 +176,4 @@ bot.add_handler(MessageHandler(rmBlackList, filters=command(
     BotCommands.RmBlackListCommand) & CustomFilters.sudo))
 bot.add_handler(MessageHandler(black_listed, filters=regex(r'^/')
     & CustomFilters.authorized & CustomFilters.blacklisted))
+
