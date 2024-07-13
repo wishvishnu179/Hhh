@@ -14,7 +14,6 @@ global_lock = Lock()
 GLOBAL_GID = set()
 getLogger("pyrogram").setLevel(ERROR)
 
-
 class TelegramDownloadHelper:
 
     def __init__(self, listener):
