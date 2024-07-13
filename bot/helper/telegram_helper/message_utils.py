@@ -427,3 +427,4 @@ async def check_botpm(message, button=None):
         _msg = "<i>You didn't START the bot in PM (Private)</i>"
         button.ubutton("Start Bot Now", f"https://t.me/{bot_name}?start=start", 'header')
         return _msg, button
+
