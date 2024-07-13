@@ -852,3 +852,4 @@ class GoogleDriveHelper:
         elif self.__is_uploading:
             LOGGER.info(f"Cancelling Upload: {self.name}")
             await self.__listener.onUploadError('your upload has been stopped and uploaded data has been deleted!')
+
