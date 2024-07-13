@@ -7,7 +7,6 @@ from dotenv import dotenv_values
 
 from bot import DATABASE_URL, user_data, rss_dict, LOGGER, bot_id, config_dict, aria2_options, qbit_options, bot_loop
 
-
 class DbManger:
     def __init__(self):
         self.__err = False
