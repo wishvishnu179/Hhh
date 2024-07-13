@@ -1295,3 +1295,4 @@ def streamvid(url: str):
         elif error:= html.xpath('//div[@class="not-found-text"]/text()'):
             raise DirectDownloadLinkException(f'ERROR: {error[0]}')
         raise DirectDownloadLinkException('ERROR: Something went wrong')
+
