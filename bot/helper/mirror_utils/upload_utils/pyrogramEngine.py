@@ -538,3 +538,4 @@ class TgUploader:
         self.__is_cancelled = True
         LOGGER.info(f"Cancelling Upload: {self.name}")
         await self.__listener.onUploadError('Your Upload has been Stopped!')
+
