@@ -181,7 +181,7 @@ async def join_files(path):
 
 
 async def edit_metadata(listener, base_dir: str, media_file: str, outfile: str, metadata: str = ''):
-    cmd = ['ffmpeg', '-hide_banner', '-ignore_unknown', '-i', media_file, '-metadata',  f'title=JOIN @VK_OFCL IN TELEGRAM',  '-metadata', f'CREDITS=VK RIPS', '-metadata', f'Copyright=Copyrights All Reversed BY VK RIPS', '-metadata', f'Comment=Privacy is Crime, Credits - VK Rips', '-metadata', f'author=Team VK-Vasu, Kranthi', '-metadata', f'Description=Encoded by VK RIPS', '-metadata', f'Powered_By=@VK_OFCL','-metadata:s:v',
+    cmd = ['ffmpeg', '-hide_banner', '-ignore_unknown', '-i', media_file, '-metadata',  f'title=JOIN @VK_OFCL IN TELEGRAM',  '-metadata', f'CREDITS=VK RIPS', '-metadata', f'Copyright=Copyrights All Reserved BY VK RIPS', '-metadata', f'Comment=Privacy is Crime, Credits - VK Rips', '-metadata', f'author=Team VK-Vasu, Kranthi', '-metadata', f'Description=Encoded by VK RIPS', '-metadata', f'Powered_By=@VK_OFCL','-metadata:s:v',
            f'title={metadata}', '-metadata:s:a', f'title={metadata}', '-metadata:s:s', f'title={metadata}', '-map', '0:v:0?',
            '-map', '0:a:?', '-map', '0:s:?', '-c:v', 'copy', '-c:a', 'copy', '-c:s', 'copy', outfile, '-y']
     listener.suproc = await create_subprocess_exec(*cmd, stderr=PIPE)
