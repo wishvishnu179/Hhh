@@ -2,14 +2,14 @@
 class WZMLStyle:
     # ----------------------
     # async def start(client, message) ---> __main__.py
-    ST_BN1_NAME = '🛠️ Update'
-    ST_BN1_URL = 'https://t.me/teluguzoneofc'
-    ST_BN2_NAME = '😘 Use Me'
-    ST_BN2_URL = 'https://t.me/+Yu69s_CVpIsyOGU1'
-    ST_MSG = '''<b>✨ 𝗣𝗼𝘄𝗲𝗿𝗲𝗱 𝗕𝘆 DAEMON ➔ Mirror & Leech</b>\n\nI Can Upload Files, Links, Torrents, etc. to Telegram, Google Drive, DDL Servers and Rclone Supported Sites!\n\n
+    ST_BN1_NAME = '🔰My Creator'
+    ST_BN1_URL = 'https://t.me/vishnudhfm14'
+    ST_BN2_NAME = ' Updates🔰'
+    ST_BN2_URL = 'https://t.me/tgcinemaworld'
+    ST_MSG = '''<b>✨ 𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝑩𝒚: 𝐕𝐢𝐬𝐡𝐧𝐮𝐌𝐁🤍 ➔ Mirror & Leech</b>\n\nI Can Upload Files, Links, Torrents, etc. to Telegram, Google Drive, DDL Servers and Rclone Supported Sites!\n\n
 <b>Type {help_command} to get a list of available commands</b>'''
     ST_BOTPM = '''<b>🕵️ Bot PM Initiated Successfully!\n\n I will send all your files and links here.</b>'''
-    ST_UNAUTH = '''<b>⚠️ Access Denied!</b>'''
+    ST_UNAUTH = '''<b>⚠️ Sorry You Cant Use Me! Cᴏɴᴛᴀᴄᴛ @Vishnudhfm14</b>'''
     OWN_TOKEN_GENERATE = '''<b>❌ Temporary Token is not Yours!</b>\n\n<i>Kindly Generate Your Own.</i>'''
     USED_TOKEN = '''<b>‼️ Temporary Token Already Used!</b>\n\n<i>Kindly Generate a New One.</i>'''
     LOGGED_PASSWORD = '''<b>✅ Bot Already Logged In via Password</b>\n\n<i>No Need to Accept Temp Tokens.</i>'''
@@ -44,21 +44,21 @@ class WZMLStyle:
 
 <b>⏰ Bot Uptime :</b> {bot_uptime}
 
-╭ ▸<b>💽 RAM</b>
-┃ {ram_bar} » ({ram}%)
-╰ ▸<b>U :</b> {ram_u} ┃ <b>F :</b> {ram_f} ┃ <b>T :</b> {ram_t}
+╭ ▸ 🔸<b><i>RAM ( MEMORY ) :</i></b>
+┃ {ram_bar} {ram}%
+┖🔹 <b>U :</b> {ram_u} | <b>F :</b> {ram_f} | <b>T :</b> {ram_t}
 
-╭ ▸<b>👒 SWAP</b>
-┃ {swap_bar} » ({swap}%)
-╰ ▸<b>U :</b> {swap_u} ┃ <b>F :</b> {swap_f} ┃ <b>T :</b> {swap_t}
+┎ 🔹<b><i>SWAP MEMORY :</i></b>
+┃ {swap_bar} {swap}%
+┖🔸 <b>U :</b> {swap_u} | <b>F :</b> {swap_f} | <b>T :</b> {swap_t}
 
-╭ ▸<b>📦 DISK</b>
-┃ {disk_bar} » ({disk}%)
-┠ ▸<b>Total Disk Read :</b> {disk_read}
-┠ ▸<b>Total Disk Write :</b> {disk_write}
-╰ ▸<b>U :</b> {disk_u} ┃ <b>F :</b> {disk_f} ┃ <b>T :</b> {disk_t}
+┎ ▫️<b><i>DISK :</i></b>
+┃ {disk_bar} {disk}%
+┃🔹 <b>Total Disk Read :</b> {disk_read}
+┃🔸<b>Total Disk Write :</b> {disk_write}
+┖▪️ <b>U :</b> {disk_u} ┃ <b>F :</b> {disk_f} ┃ <b>T :</b> {disk_t}
 
-<a href="https://t.me/Daemon990"><b>𝗣𝗼𝘄𝗲𝗿𝗲𝗱 𝗕𝘆 DAEMON</b></a>
+<a href="https://t.me/Vishnudhfm14"><b>𝑩𝒚: 𝐕𝐢𝐬𝐡𝐧𝐮𝐌𝐁🤍</b></a>
     
     '''
     SYS_STATS = '''<b>🛠 <u>𝙎𝙮𝙨𝙩𝙚𝙢 𝙎𝙩𝙖𝙩𝙞𝙨𝙩𝙞𝙘𝙨</u></b>
@@ -82,7 +82,7 @@ class WZMLStyle:
 ┠ ▸<b>Total Cores :</b> {total_core}
 ╰ ▸<b>Usable CPUs :</b> {cpu_use}
 
-<a href="https://t.me/Daemon990"><b>𝗣𝗼𝘄𝗲𝗿𝗲𝗱 𝗕𝘆 DAEMON</b></a>
+<a href="https://t.me/Vishnudhfm14"><b>𝑩𝒚: 𝐕𝐢𝐬𝐡𝐧𝐮𝐌𝐁🤍</b></a>
     '''
     REPO_STATS = '''<b>🧑‍💻 <u>𝙍𝙚𝙥𝙤 𝙎𝙩𝙖𝙩𝙞𝙨𝙩𝙞𝙘𝙨</u></b>
 
@@ -93,25 +93,25 @@ class WZMLStyle:
 
 <b>💥 REMARKS :</b> <code>{remarks}</code>
 
-<a href="https://t.me/Daemon990"><b>𝗣𝗼𝘄𝗲𝗿𝗲𝗱 𝗕𝘆 DAEMON</b></a>
+<a href="https://t.me/Vishnudhfm14"><b>𝑩𝒚: 𝐕𝐢𝐬𝐡𝐧𝐮𝐌𝐁🤍</b></a>
     '''
     BOT_LIMITS = '''<b>❗<u>𝘽𝙤𝙩 𝙇𝙞𝙢𝙞𝙩𝙨</u></b>
 
-╭ ▸<b>🎯 Direct :</b> {DL} GB
-┠ ▸<b>🧲 Torrent :</b> {TL} GB
-┠ ▸<b>☁️ GDrive :</b> {GL} GB
-┠ ▸<b>📺 YT-DLP :</b> {YL} GB
+╭ ▸<b>⚜️ Direct :</b> {DL} GB
+┠ ▸<b>☣️ Torrent :</b> {TL} GB
+┠ ▸<b>🇬 GDrive :</b> {GL} GB
+┠ ▸<b>⏭️ YT-DLP :</b> {YL} GB
 ┠ ▸<b>🎥 Playlist :</b> {PL} Videos
 ┠ ▸<b>Ⓜ️ Mega :</b> {ML} GB
-┠ ▸<b>🎗️ Clone :</b> {CL} GB
-╰ ▸<b>📂 Leech :</b> {LL} GB
+┠ ▸<b>🧬 Clone :</b> {CL} GB
+╰ ▸<b>🐛 Leech :</b> {LL} GB
 
-╭ ▸<b>🔑 Token Validity :</b> {TV}
-┠ ▸<b>🐢 Timeout :</b> {UTI}
+╭ ▸<b>⚠️ Token Validity :</b> {TV}
+┠ ▸<b>💠 Timeout :</b> {UTI}
 ┠ ▸<b>👤 User Tasks :</b> {UT}
-╰ ▸<b>🚧 Total Tasks :</b> {BT}
+╰ ▸<b>⛓️ Total Tasks :</b> {BT}
 
-<a href="https://t.me/Daemon990"><b>𝗣𝗼𝘄𝗲𝗿𝗲𝗱 𝗕𝘆 DAEMON</b></a>
+<a href="https://t.me/Vishnudhfm14"><b>𝑩𝒚: 𝐕𝐢𝐬𝐡𝐧𝐮𝐌𝐁🤍</b></a>
     '''
     # ---------------------
 
@@ -127,7 +127,7 @@ class WZMLStyle:
 ┠ ▸<b>🌍 TimeZone:</b> {timz}
 ╰ ▸<b>🆔 Version:</b> {version}
 
-<a href="https://t.me/Daemon990"><b>𝗣𝗼𝘄𝗲𝗿𝗲𝗱 𝗕𝘆 DAEMON</b></a>'''
+<a href="https://t.me/Vishnudhfm14"><b>𝑩𝒚: 𝐕𝐢𝐬𝐡𝐧𝐮𝐌𝐁🤍</b></a>'''
     RESTARTED = '''<b>🔄 Bot Restarted!</b>'''
     # ---------------------
 
@@ -137,19 +137,19 @@ class WZMLStyle:
     # ---------------------
 
     # async def onDownloadStart(self): --> tasks_listener.py
-    LINKS_START = """<b>🚧 Task Started</b>
+    LINKS_START = """<b>📋 Task Started</b>
 
-╭ ▸<b>💠 Mode:</b> {Mode}
+╭ ▸<b>🛡️ Mode:</b> {Mode}
 ╰ ▸<b>👤 User:</b> {Tag}\n\n"""
-    LINKS_SOURCE = """╭ ▸<b>💡 Source:</b>
+    LINKS_SOURCE = """╭ ▸<b>🌐 Source:</b>
 ╰ ▸<b>⏰ Time:</b> {On}
 ------------------------------------------
 {Source}
 ------------------------------------------\n\n"""
     
     # async def __msg_to_reply(self): ---> pyrogramEngine.py
-    PM_START =            "🏁 <b><u>Leech Started</u> :</b>\n\n<b>💡 Source :</b> <a href='{msg_link}'>Click Here</a>"
-    L_LOG_START =           "🏁 <b><u>Leech Started</u> :</b>\n\n╭ ▸<b>👤 User :</b> {mention}┃ <b>🆔 ID :</b> <code>{uid}</code>\n╰ ▸<b>💡 Source :</b> <a href='{msg_link}'>Click Here</a>"
+    PM_START =            " <b><u>Leech Started</u> :</b>\n\n<b>🌐 Source :</b> <a href='{msg_link}'>Click Here</a>"
+    L_LOG_START =           " <b><u>Leech Started</u> :</b>\n\n╭ ▸<b>👤 User :</b> {mention}┃ <b>🆔 ID :</b> <code>{uid}</code>\n╰ ▸<b>🌐 Source :</b> <a href='{msg_link}'>Click Here</a>"
 
     # async def onUploadComplete(): ---> tasks_listener.py
     NAME =                  '╭ ▸<b>🏷️ Name:</b> {Name}\n'
@@ -262,7 +262,7 @@ class WZMLStyle:
     # async def mirror_status(_, message): ----> status.py
     NO_ACTIVE_DL = '''<b>💩 No Active Tasks!</b>
 
-<a href="https://t.me/Daemon990"><b>𝗣𝗼𝘄𝗲𝗿𝗲𝗱 𝗕𝘆 DAEMON</b></a>
+<a href="https://t.me/Vishnudhfm14"><b>𝑩𝒚: 𝐕𝐢𝐬𝐡𝐧𝐮𝐌𝐁🤍</b></a>
 
 ⌬ <b><u>Bot Stats</u></b>
 ╭ ▸<b>🖥️ CPU: <i>{cpu}% </i>┃ 💿 RAM: <i>{ram}% </i></b>
@@ -273,53 +273,53 @@ class WZMLStyle:
     # USER Setting --> user_setting.py 
     USER_SETTING = '''👩🏻‍🚀 <b><u>User Settings</u></b>
         
-╭ ▸<b>👤 Name :</b> {NAME}
-┠ ▸<b>🔖 Username :</b> {USERNAME}
+╭ ▸<b>👤 Nᴀᴍᴇ :</b> {NAME}
+┠ ▸<b>📑 Usᴇʀɴᴀᴍᴇ :</b> {USERNAME}
 ┠ ▸<b>🆔 ID :</b> <code>{ID}</code>
-┠ ▸<b>🔮 DC :{DC}</b>
-╰ ▸<b>🗣️ Language :</b> {LANG}
+┠ ▸<b>✈️ Tᴇʟᴇɢʀᴀᴍ Dᴄ :{DC}</b>
+╰ ▸<b>🌎 Lᴀɴɢᴜᴀɢᴇ :</b> {LANG}
 
 ➲ <u><b>Available Args:</b></u>
 • <b>-s</b> or <b>-set</b>: Set Directly via Arg\n\n<a href="https://t.me/Daemon990"><b>𝗣𝗼𝘄𝗲𝗿𝗲𝗱 𝗕𝘆 DAEMON</b></a>'''
 
     UNIVERSAL = '''㊂ <b><u>Universal</u></b>
 
-╭ ▸<b>📺 YT-DLP Options :</b> <code>{YT}</code>
-┠ ▸<b>🚧 Daily Tasks :</b> {DT} per day
-┠ ▸<b>🟢 Last Used :</b> {LAST_USED}
-┠ ▸<b>👮🏻 User Session :</b> <i>{USESS}</i>
-┠ ▸<b>📜 Media Info :</b> <i>{MEDIAINFO}</i>
-┠ ▸<b>🕵️ Bot PM :</b> <i>{BOT_PM}</i>
-╰ ▸<b>📩 Save Mode :</b> <i>{SAVE_MODE}</i>
+╭ ▸<b>🕹️ YT-DLP Oᴘᴛɪᴏɴs :</b> <b><code>{YT}</code></b>
+┠<b>📣 Dᴀɪʟʏ Tᴀsᴋs :</b> <code>{DT}</code> per day
+┠<b>🔓 Lᴀsᴛ Bᴏᴛ Usᴇᴅ :</b> <code>{LAST_USED}</code>
+┠<b>👱🏻‍♂️ Usᴇʀ Sᴇssɪᴏɴ :</b> <code>{USESS}</code>
+┠<b>📼 MᴇᴅɪᴀIɴғᴏ Mᴏᴅᴇ :</b> <code>{MEDIAINFO}</code>
+┠<b>✔ Sᴀᴠᴇ Mᴏᴅᴇ :</b> <code>{SAVE_MODE}</code>
+╰ ▸<b>📩 Usᴇʀ Bᴏᴛ PM :</b> <code>{BOT_PM}</code>
 
-<a href="https://t.me/Daemon990"><b>𝗣𝗼𝘄𝗲𝗿𝗲𝗱 𝗕𝘆 DAEMON</b></a>'''
+<a href="https://t.me/Vishnudhfm14"><b>𝑩𝒚: 𝐕𝐢𝐬𝐡𝐧𝐮𝐌𝐁🤍</b></a>'''
 
     MIRROR = '''㊂ <b><u>Mirror/Clone : {NAME}</u></b>
 
-╭ ▸<b>☁️ Daily Mirror :</b> {DM} per day</i>
-┠ ▸<b>Ⓟ Prefix :</b> <code>{MPREFIX}</code>
-┠ ▸<b>Ⓢ Suffix :</b> <code>{MSUFFIX}</code>
-┠ ▸<b>🌈 Remname :</b> <code>{MREMNAME}</code>
-┠ ▸<b>🧿 DDL Server(s) :</b> <i>{DDL_SERVER}</i>
-┠ ▸<b>🎀 RClone :</b> <i>{RCLONE}</i>
-┠ ▸<b>📮 User TD :</b> <i>{TMODE}</i>
-╰ ▸<b>📝 TD Info:</b> <i>{USERTD}</i>
+╭ ▸<b>☁️ RCʟᴏɴᴇ Cᴏɴғɪɢ :</b> <i>{RCLONE}</i>
+┠<b>🅿 Pʀᴇғɪx :</b> <code>{MPREFIX}</code>
+┠<b>🆂 Sᴜғғɪx :</b> <code>{MSUFFIX}</code>
+┠<b>🔈 Rᴇᴍɴᴀᴍᴇ :</b> <code>{MREMNAME}</code>
+┠<b>🉐 DDL Sᴇʀᴠᴇʀ(s) :</b> <i>{DDL_SERVER}</i>
+┠<b>🎰 Usᴇʀ TD Mᴏᴅᴇ :</b> <i>{TMODE}</i>
+┠<b>🐙 Tᴏᴛᴀʟ Usᴇʀ TD(s) :</b> <i>{USERTD}</i>
+╰ ▸<b>💢 Dᴀɪʟʏ Mɪʀʀᴏʀ :</b> <code>{DM}</code> per day
 
-<a href="https://t.me/Daemon990"><b>𝗣𝗼𝘄𝗲𝗿𝗲𝗱 𝗕𝘆 DAEMON</b></a>'''
+<a href="https://t.me/Vishnudhfm14"><b>𝑩𝒚: 𝐕𝐢𝐬𝐡𝐧𝐮𝐌𝐁🤍</b></a>'''
 
     LEECH = '''💫 <b><u>Leech Settings - {NAME}</u></b>
 
-╭ ▸<b>📂 Daily Leech : </b>{DL} per day
-┠ ▸<b>⚙️ Leech Type :</b> <i>{LTYPE}</i>
-┠ ▸<b>🖼️ Thumbnail :</b> <i>{THUMB}</i>
-┠ ▸<b>♈ Split Size :</b> <code>{SPLIT_SIZE}</code>
-┠ ▸<b>♐ Equal Splits :</b> <i>{EQUAL_SPLIT}</i>
-┠ ▸<b>♒ Media Group :</b> <i>{MEDIA_GROUP}</i>
-┠ ▸<b>📄 Caption :</b> <code>{LCAPTION}</code>
-┠ ▸<b>Ⓟ Prefix :</b> <code>{LPREFIX}</code>
-┠ ▸<b>Ⓢ Suffix :</b> <code>{LSUFFIX}</code>
-┠ ▸<b>📦 Dump :</b> <code>{LDUMP}</code>
-┠ ▸<b>✍️ Metadata :</b> <code>{METADATA}</code>
-╰ ▸<b>🌈 Remname :</b> <code>{LREMNAME}</code>
+╭ ▸<b>🗃️ Dᴀɪʟʏ Lᴇᴇᴄʜ : </b><code>{DL}</code> per day
+┠<b>🗝️ Lᴇᴇᴄʜ Tʏᴘᴇ :</b> <i>{LTYPE}</i>
+┠<b>🖼 Cᴜsᴛᴏᴍ Tʜᴜᴍʙɴᴀɪʟ :</b> <i>{THUMB}</i>
+┠<b>💈 Lᴇᴇᴄʜ Sᴘʟɪᴛ Sɪᴢᴇ :</b> <code>{SPLIT_SIZE}</code>
+┠<b>🟰 Eǫᴜᴀʟ Sᴘʟɪᴛs :</b> <i>{EQUAL_SPLIT}</i>
+┠<b>🌠 Mᴇᴅɪᴀ Gʀᴏᴜᴘ :</b> <i>{MEDIA_GROUP}</i>
+┠<b>💠 Lᴇᴇᴄʜ Cᴀᴘᴛɪᴏɴ :</b> <code>{LCAPTION}</code>
+┠<b>🅿 Pʀᴇғɪx :</b> <code>{LPREFIX}</code>
+┠<b>🆂 Sᴜғғɪx :</b> <code>{LSUFFIX}</code>
+┠<b>🪵 Lᴇᴇᴄʜ Dumps :</b> <code>{LDUMP}</code>
+┠<b>✍️ Mᴇᴛᴀᴅᴀᴛᴀ :</b> <code>{METADATA}</code>
+╰ ▸<b>🪅 Rᴇᴍɴᴀᴍᴇ :</b> <code>{LREMNAME}</code>
 
-<a href="https://t.me/Daemon990"><b>𝗣𝗼𝘄𝗲𝗿𝗲𝗱 𝗕𝘆 DAEMON</b></a>'''
+<a href="https://t.me/Vishnudhfm14"><b>𝑩𝒚: 𝐕𝐢𝐬𝐡𝐧𝐮𝐌𝐁🤍</b></a>'''
