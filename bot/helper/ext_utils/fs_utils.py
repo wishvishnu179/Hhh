@@ -181,7 +181,7 @@ async def join_files(path):
 
 
 async def edit_metadata(listener, base_dir: str, media_file: str, outfile: str, metadata: str = ''):
-    cmd = ['ffmpeg', '-hide_banner', '-ignore_unknown', '-i', media_file, '-metadata',  f'title=Join @Movies_Dayz in Telegram',  '-metadata', f'CREDITS=Movies Dayz', '-metadata', f'Copyright=Copyrights All Reserved By Movies Dayz', '-metadata', f'Comment=Privacy is Crime, Credits - Movies Dayz', '-metadata', f'author=Team Karthik, Dhinesh', '-metadata', f'Description=Encoded by Movies Dayz', '-metadata', f'Powered_By=@Movies_Dayz','-metadata:s:v',
+    cmd = ['ffmpeg', '-hide_banner', '-ignore_unknown', '-i', media_file, '-metadata',  f'title= Vishnu @TGCinemaworld',  '-metadata', f'CREDITS=Tgcwupdates', '-metadata', f'Copyright=All Rights Reserved To @TGCinemaworld', '-metadata', f'Comment=Dont Encourage Piracy, Credits - @TGCinemaworld', '-metadata', f'author=𝐕𝐢𝐬𝐡𝐧𝐮 𝐌𝐁🤍', '-metadata', f'Description=Encoded by Vishnu', '-metadata', f'Powered_By=@TGCinemaworld','-metadata:s:v',
            f'title={metadata}', '-metadata:s:a', f'title={metadata}', '-metadata:s:s', f'title={metadata}', '-map', '0:v:0?',
            '-map', '0:a:?', '-map', '0:s:?', '-c:v', 'copy', '-c:a', 'copy', '-c:s', 'copy', outfile, '-y']
     listener.suproc = await create_subprocess_exec(*cmd, stderr=PIPE)
