@@ -6,8 +6,8 @@ class WZMLStyle:
     ST_BN1_URL = 'https://t.me/vishnudhfm14'
     ST_BN2_NAME = ' Updates🔰'
     ST_BN2_URL = 'https://t.me/tgcinemaworld'
-    ST_MSG = '''<b>✨ 𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝑩𝒚: 𝐕𝐢𝐬𝐡𝐧𝐮𝐌𝐁🤍 ➔ Mirror & Leech</b>\n\nI Can Upload Files, Links, Torrents, etc. to Telegram, Google Drive, DDL Servers and Rclone Supported Sites!\n\n
-<b>Type {help_command} to get a list of available commands</b>'''
+    ST_MSG = '''<b>Mirror & Leech</b>\n\nI Can Upload Files, Links, Torrents, etc. to Telegram, Google Drive, DDL Servers and Rclone Supported Sites!\n\n
+<b>Type {help_command} to get a list of available commands \n\n ✨ 𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝑩𝒚: 𝐕𝐢𝐬𝐡𝐧𝐮𝐌𝐁🤍 ➔</b>'''
     ST_BOTPM = '''<b>🕵️ Bot PM Initiated Successfully!\n\n I will send all your files and links here.</b>'''
     ST_UNAUTH = '''<b>⚠️ Sorry You Cant Use Me! Cᴏɴᴛᴀᴄᴛ @Vishnudhfm14</b>'''
     OWN_TOKEN_GENERATE = '''<b>❌ Temporary Token is not Yours!</b>\n\n<i>Kindly Generate Your Own.</i>'''
@@ -250,7 +250,7 @@ class WZMLStyle:
     COUNT_TYPE = '┠ ▸<b>📜 Type: </b>{COUNT_TYPE}\n'
     COUNT_SUB =  '┠ ▸<b>🗂️ SubFolders: </b>{COUNT_SUB}\n'
     COUNT_FILE = '┠ ▸<b>📂 Files: </b>{COUNT_FILE}\n'
-    COUNT_CC =   '╰ ▸<b>👤 User: </b>{COUNT_CC}\n\n<a href="https://t.me/Daemon990"><b>𝗣𝗼𝘄𝗲𝗿𝗲𝗱 𝗕𝘆 DAEMON</b></a>'
+    COUNT_CC =   '╰ ▸<b>👤 User: </b>{COUNT_CC}\n\n<a href="https://t.me/Vishnudhfm14"><b>𝑩𝒚: 𝐕𝐢𝐬𝐡𝐧𝐮𝐌𝐁🤍</b></a>'
     # ---------------------
 
     # LIST ---> gd_list.py
@@ -280,7 +280,7 @@ class WZMLStyle:
 ╰ ▸<b>🌎 Lᴀɴɢᴜᴀɢᴇ :</b> {LANG}
 
 ➲ <u><b>Available Args:</b></u>
-• <b>-s</b> or <b>-set</b>: Set Directly via Arg\n\n<a href="https://t.me/Daemon990"><b>𝗣𝗼𝘄𝗲𝗿𝗲𝗱 𝗕𝘆 DAEMON</b></a>'''
+• <b>-s</b> or <b>-set</b>: Set Directly via Arg\n\n<a href="https://t.me/Vishnudhfm14"><b>𝑩𝒚: 𝐕𝐢𝐬𝐡𝐧𝐮𝐌𝐁🤍</b></a>'''
 
     UNIVERSAL = '''㊂ <b><u>Universal</u></b>
 
