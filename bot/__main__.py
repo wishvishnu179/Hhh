@@ -34,11 +34,6 @@ from .modules import authorize, clone, gd_count, gd_delete, gd_list, cancel_mirr
                      rss, shell, eval, users_settings, bot_settings, speedtest, save_msg, images, imdb, anilist, mediainfo, mydramalist, gen_pyro_sess, \
                      gd_clean, broadcast, category_select
 
-ppath = "plugins/*.py"
-files = glob.glob(ppath)
-Webavbot.start()
-loop = asyncio.get_event_loop()
-
 async def stats(client, message):
     msg, btns = await get_stats(message)
     await sendMessage(message, msg, btns, photo='IMAGES')
