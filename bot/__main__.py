@@ -34,24 +34,6 @@ from .modules import authorize, clone, gd_count, gd_delete, gd_list, cancel_mirr
                      rss, shell, eval, users_settings, bot_settings, speedtest, save_msg, images, imdb, anilist, mediainfo, mydramalist, gen_pyro_sess, \
                      gd_clean, broadcast, category_select
 
-import asyncio
-import aiohttp
-
-URL = "https://mid-roxanne-mahesh00-5aaad658.koyeb.app/"  # It Fixs Koyeb Sleeping Problem...
-
-async def ping():
-    async with aiohttp.ClientSession() as session:
-        while True:
-            try:
-                async with session.get(URL) as response:
-                    print(f"Pinged server, status: {response.status}")
-            except Exception as e:
-                print(f"{e}")
-            await asyncio.sleep(120) # Make Sure You Add the Time 
-
-loop = asyncio.get_event_loop()
-loop.create_task(ping()) # It Works for Sure I Guess 
-
 ppath = "plugins/*.py"
 files = glob.glob(ppath)
 Webavbot.start()
