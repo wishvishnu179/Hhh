@@ -19,6 +19,24 @@ from pyrogram.handlers import MessageHandler, CallbackQueryHandler
 from pyrogram.filters import command, private, regex
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
+import asyncio
+import aiohttp
+
+URL = "https://mid-roxanne-mahesh00-5aaad658.koyeb.app/"  # Replace with your koyeb app link...
+
+async def ping():
+    async with aiohttp.ClientSession() as session:
+        while True:
+            try:
+                async with session.get(URL) as response:
+                    print(f"Pinged server, status: {response.status}")
+            except Exception as e:
+                print(f"{e}")
+            await asyncio.sleep(600)
+
+loop = asyncio.get_event_loop()
+loop.create_task(ping())
+
 from bot import bot, user, bot_name, config_dict, user_data, botStartTime, LOGGER, Interval, DATABASE_URL, QbInterval, INCOMPLETE_TASK_NOTIFIER, scheduler
 from bot.version import get_version
 from .helper.ext_utils.fs_utils import start_cleanup, clean_all, exit_clean_up
